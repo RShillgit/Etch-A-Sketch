@@ -14,6 +14,7 @@ for (let i = 0; i < columns; i++) {
         // Create row divs
         const row = document.createElement('div');
         row.className = 'row';
+        row.setAttribute('id', 'box');
         // Append rows to columns
         column.appendChild(row);
     };
@@ -21,4 +22,12 @@ for (let i = 0; i < columns; i++) {
     grid.appendChild(column);
 };
 
+// When you hover over box, change its class to a diff name,
+// and change that class' background color in css
+boxes = document.querySelectorAll('.row');
 
+boxes.forEach(box => {
+    box.addEventListener('mouseover', function(e) {
+        e.target.style.backgroundColor = 'aqua';
+    });    
+});
