@@ -8,8 +8,13 @@
 
     <body>
         <header>
-            <h1>Welcome to my Etch A Sketch!</h1>
+            <h1>Welcome to my Etch-A-Sketch!</h1>
             <h2>Hover over the grid to draw.</h2>
+            <div class="toolbar">
+                <label for="size">Grid size: </label>
+                <input id="size">
+                <button class="sizeBtn" onclick="resizeGrid()">Resize</button>
+            </div>
         </header>
 
         <div class="grid">

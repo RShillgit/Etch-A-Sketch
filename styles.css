@@ -6,7 +6,13 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+
+header > button {
+    font-size: medium;
+    width: 100px;
 }
 
 .grid {
@@ -17,6 +23,7 @@ header {
 .column {
     border: 1px solid black;
 }
+
 .row {
     border: 1px solid black;
     width: 40px;
