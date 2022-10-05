@@ -14,7 +14,6 @@ for (let i = 0; i < columns; i++) {
         // Create row divs
         const row = document.createElement('div');
         row.className = 'row';
-        row.textContent = 'Grid';
         // Append rows to columns
         column.appendChild(row);
     };
