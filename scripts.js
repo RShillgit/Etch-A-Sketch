@@ -4,12 +4,15 @@ let rows = 16;
 
 // Function that creates the grid given a number of rows and columns
 function createGrid(rows, columns) {
+    // Get container div and store it in a variable
+    const gridContainer = document.querySelector('.container');
+
     // Create a div that will hold the grid
     const grid = document.createElement('div');
     grid.className = 'grid';
 
     // Append grid to html body
-    document.body.appendChild(grid);
+    gridContainer.appendChild(grid);
 
     for (let i = 0; i < columns; i++) {
         // Create column divs
