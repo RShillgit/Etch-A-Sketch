@@ -96,7 +96,6 @@ function clearGrid() {
     })
 }
 
-
 // Function that allows user to draw on grid
 function draw(inkColor) {
     // When you hover over a box, change its background color
@@ -108,22 +107,47 @@ function draw(inkColor) {
     });    
 });
 }
-draw(inkColor);
 
-function randomColor() {
-    let letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
+function rainbow() {
+     // Get boxs in a variable
+     boxes = document.querySelectorAll('.row');
 
-    // When you hover over a box, change its background color
+     boxes.forEach(box => {
+        box.addEventListener('mouseover', function(e) {
+            // Get all possible characters for hex values
+            let letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            e.target.style.backgroundColor = color; 
+        });
+    });
+}
+
+// for each box add mouseover event, if it is one of the values make it the next value in the list
+// if it is none of the values, make it the first one(white)
+function grayscale() {
+    // 11 values starting from white getting darker until solid black
+    const shades = ['#FFFFFF', '#F0F0F0', '#D4D4D4', '#B8B8B8', '#9C9C9C', '#7F7F7F', '#636363', '#474747', '#2B2B2B', '#0F0F0F', '000000'];
+
+    // Get boxes in a variable
     boxes = document.querySelectorAll('.row');
 
+    // For each box get its current color
     boxes.forEach(box => {
         box.addEventListener('mouseover', function(e) {
-            e.target.style.backgroundColor = color;
-    });   
+            e.target.style.backgroundColor = shades[0];
+            // Iterate through shades array
+            for (i = 0; i < shades.length; i++) {
+                if (color == shades[i]) {
+                    color = shades[i + 1];
+                    e.target.style.backgroundColor = color;
+                }
+                
+            }
+             
+            });
+        }
+    )};
 
-});
-}
