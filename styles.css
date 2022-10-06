@@ -1,3 +1,16 @@
+@font-face {
+    font-family: NormandyBeach;
+    src: url(fonts/NormandyBeach.otf);
+}
+html {
+    background-image: url(neon-grid-background/neon-grid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    font-family: NormandyBeach;
+    color: violet;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -9,29 +22,56 @@ header {
     align-items: center;
     margin: 20px;
 }
+.header > p {
+    font-size: 50px;
+    font-weight: 500px;
+    margin: 20px;
+}
 
-header > button {
-    font-size: medium;
-    width: 100px;
+.toolbar > #size, button {
+    font-size: large;
+    background-color: transparent;
+    color: violet;
+    border: 1px solid violet;
+    border-radius: 5px;
+}
+.toolbar > button {
+    width: 80px;
+}
+.toolbar > label {
+    font-size: large;
+}
+.toolbar > input {
+    width: 70px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
 }
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: center;  
 }
 
 .grid {
-    display: flex;
+    display: grid;
+    background-color: white;
+    height: 700px;
+    width: 700px;
+    border: 6px solid violet;
+    box-shadow: 20px 20px 40px lightpink;
 }
 
 .column {
-    border: 1px solid black;
+    display: flex;
 }
 
 .row {
-    border: 1px solid black;
+    border: 1px solid lightpink;
     display: flex;
-    width: 40px;
-    height: 40px;
-    flex-wrap: wrap;
+    flex: 1 1 0; 
 }

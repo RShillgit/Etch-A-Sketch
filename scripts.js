@@ -36,9 +36,9 @@ function createGrid(rows, columns) {
 // Run this function on document load with the initial row/column values
 window.onload = createGrid(rows, columns);
 
-// Set the Grid Size input feild's placeholder to the current grid size
+// Set the Grid Size input feild's value to the current grid size
 const input = document.getElementById('size');
-input.setAttribute('placeholder', `${columns}x${rows}`);
+input.setAttribute('value', `${columns}x${rows}`);
 
 // Function that resizes the grid
 function resizeGrid() {
