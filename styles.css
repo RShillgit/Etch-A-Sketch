@@ -29,22 +29,30 @@ header {
 }
 
 .toolbar > #size, button {
-    font-size: large;
+    font-size: x-large;
     background-color: transparent;
     color: violet;
-    border: 1px solid violet;
+    border: 2px solid violet;
     border-radius: 5px;
 }
-.toolbar > button {
-    width: 80px;
+.toolbar button:hover {
+    background-color: violet;
+    color: purple;
+    border: 2px solid purple;
 }
-.toolbar > label {
-    font-size: large;
+.toolbar button:active {
+    background-color: white;
+    box-shadow: 0px 0px 10px white;
 }
-.toolbar > input {
+.left-toolbar > input, .middle-toolbar > input {
     width: 70px;
+    background-color: transparent;
+    color: violet;
+    font-size: large;
+    border: 1px solid violet;
 }
 .toolbar {
+    font-size: x-large;
     display: flex;
     flex-direction: row;
 }

@@ -96,6 +96,7 @@ function clearGrid() {
     })
 }
 
+
 // Function that allows user to draw on grid
 function draw(inkColor) {
     // When you hover over a box, change its background color
@@ -109,3 +110,20 @@ function draw(inkColor) {
 }
 draw(inkColor);
 
+function randomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+
+    // When you hover over a box, change its background color
+    boxes = document.querySelectorAll('.row');
+
+    boxes.forEach(box => {
+        box.addEventListener('mouseover', function(e) {
+            e.target.style.backgroundColor = color;
+    });   
+
+});
+}
