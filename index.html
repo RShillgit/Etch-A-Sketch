@@ -12,10 +12,24 @@
                 <p>Welcome to my Etch-A-Sketch!</p>
                 <p>Hover over the grid to draw.</p>
             </div>
+            
             <div class="toolbar">
-                <label for="size">Grid size: </label>
-                <input id="size">
-                <button class="sizeBtn" onclick="deleteGrid(); resizeGrid()">Resize</button>
+                <div class="left-toolbar">
+                    <label for="size">Grid Size: </label>
+                    <input id="size">
+                    <button class="sizeBtn" onclick="deleteGrid(); resizeGrid()">Resize</button>
+                </div>
+                
+                <div class="middle-toolbar">
+                    <label for="color">Color: </label>
+                    <input id="color">
+                    <button class="colorBtn" onclick="changeColor()">Change</button>
+                </div>
+                
+                <div class="right-toolbar">
+                    <button class="eraseBtn" onclick="eraseColor()">Eraser</button>
+                    <button class="clearBtn" onclick="clearGrid()">Clear</button>
+                </div>
             </div>
         </header>
 

@@ -44,12 +44,22 @@ header {
 .toolbar > input {
     width: 70px;
 }
-
+.toolbar {
+    display: flex;
+    flex-direction: row;
+}
+.left-toolbar, .middle-toolbar, .right-toolbar {
+    margin: 15px;
+}
 
 footer {
     display: flex;
     justify-content: space-between;
     margin: 20px;
+}
+footer > a {
+    color: violet;
+    text-decoration: none;
 }
 
 .container {
