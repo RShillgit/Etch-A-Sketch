@@ -96,7 +96,6 @@ function clearGrid() {
     })
 }
 
-
 // Function that allows user to draw on grid
 function draw(inkColor) {
     // When you hover over a box, change its background color
@@ -108,22 +107,20 @@ function draw(inkColor) {
     });    
 });
 }
-draw(inkColor);
 
-function randomColor() {
-    let letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
+function rainbow() {
+     // Get boxs in a variable
+     boxes = document.querySelectorAll('.row');
 
-    // When you hover over a box, change its background color
-    boxes = document.querySelectorAll('.row');
-
-    boxes.forEach(box => {
+     boxes.forEach(box => {
         box.addEventListener('mouseover', function(e) {
-            e.target.style.backgroundColor = color;
-    });   
-
-});
+            // Get all possible characters for hex values
+            let letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            e.target.style.backgroundColor = color; 
+        });
+    });
 }
